@@ -1,0 +1,28 @@
+using System;
+
+public class ObjectCounter
+{
+    private static int objectCount = 0;
+
+    public ObjectCounter()
+    {
+        objectCount++;
+    }
+
+    public static int GetObjectCount()
+    {
+        return objectCount;
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        ObjectCounter obj1 = new ObjectCounter();
+        ObjectCounter obj2 = new ObjectCounter();
+        ObjectCounter obj3 = new ObjectCounter();
+
+        Console.WriteLine($"Current object count: {ObjectCounter.GetObjectCount()}");
+    }
+}
