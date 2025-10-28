@@ -1,0 +1,43 @@
+using System; 
+
+public class Book
+{
+    public readonly string Isbn;
+    public string Title { get; set; }
+    public string Author { get; set; }
+
+    public Book(string isbn, string title, string author)
+    {
+        Isbn = isbn;
+        Title = title;
+        Author = author;
+    }
+
+    public void DisplayBookInfo()
+    {
+        Console.WriteLine($"ISBN: {Isbn}");
+        Console.WriteLine($"Title: {Title}");
+        Console.WriteLine($"Author: {Author}");
+    }
+}
+
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        
+        Book myBook = new Book("978-3-16-148410-0", "The Hitchhiker's Guide to the Galaxy", "Douglas Adams");
+
+        
+        myBook.DisplayBookInfo();
+
+        
+        Book anotherBook = new Book("978-0-7432-7356-5", "The Great Gatsby", "F. Scott Fitzgerald");
+        Console.WriteLine(); 
+        anotherBook.DisplayBookInfo();
+
+        Console.WriteLine("\nНажмите Enter для выхода...");
+        Console.ReadLine(); 
+    }
+}
