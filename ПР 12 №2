@@ -1,0 +1,25 @@
+using System; 
+
+public static class ProgramConfig
+{
+    public const string Version = "1.0.0";
+    public const string Developer = "Your Name";
+
+    public static void DisplayProgramInfo()
+    {
+        Console.WriteLine($"Program Version: {Version}");
+        Console.WriteLine($"Developer: {Developer}");
+    }
+}
+
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+                ProgramConfig.DisplayProgramInfo();
+
+        Console.WriteLine("\nНажмите Enter для выхода...");
+        Console.ReadLine(); // Ожидание нажатия Enter, чтобы консольное окно не закрылось сразу
+    }
+}
