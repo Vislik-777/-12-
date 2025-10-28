@@ -1,0 +1,25 @@
+using System;
+
+public static class Settings
+{
+    private static readonly string ConfigurationFilePath;
+
+    static Settings()
+    {
+        ConfigurationFilePath = "config.json";
+    }
+
+    public static void DisplayConfigurationPath()
+    {
+        Console.WriteLine($"Configuration file path: {ConfigurationFilePath}");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Settings.DisplayConfigurationPath();
+        Console.ReadLine();
+    }
+}
